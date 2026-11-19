@@ -1,0 +1,28 @@
+<!--START reusable HEADER-->
+<header class="hdr">
+  <div class="wrap hdr-in">
+    <a class="brand" href="index.html">linux<span class="brand-acc">.</span></a>
+
+    <button class="menu-btn" aria-controls="site-nav" aria-expanded="false">
+      <span></span><span></span><span></span>
+      <span class="sr">Menu</span>
+    </button>
+
+    <!--nav bar
+    id: unique identifier
+    class: group into `nav`
+    aria-label: accessibility for screen readers
+    -->
+    <nav id="site-nav" class="nav" aria-label="Main navigation">
+      <a href="index.html" {{active-home}}>Home</a>
+      <a href="about.html" {{active-about}}>About</a>
+      <a href="why-linux.html" {{active-why}}>Why Linux</a>
+      <a href="how-it-works.html" {{active-how}}>How it works</a>
+      <a href="distributions.html" {{active-distros}}>Distributions</a>
+      <a href="get-started.html" {{active-start}}>Get started</a>
+    </nav>
+
+    <a class="hdr-cta" href="get-started.html">Start Linux-ing</a>
+  </div>
+</header>
+<!--END reusable HEADER-->

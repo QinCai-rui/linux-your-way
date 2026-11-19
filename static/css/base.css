@@ -1,0 +1,106 @@
+/* START defaults */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--fg);
+  background: var(--bg);
+}
+
+a { color: inherit; }
+ul, ol { list-style: none; }
+img, iframe { max-width: 100%; display: block; }
+button { font: inherit; cursor: pointer; border: none; background: none; }
+
+h1, h2, h3 {
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+h1 { font-size: 2.4rem; }
+h2 { font-size: 1.3rem; }
+
+p { margin-bottom: 1em; }
+
+.sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+/* END defaults */
+
+/* START responsive */
+@media (max-width: 768px) {
+  h1 { font-size: 1.8rem; }
+  .intro, .txt-col { grid-template-columns: 1fr; }
+  .intro { padding-top: 40px; }
+  .g3, .g4 { grid-template-columns: 1fr 1fr; }
+  .g2 { grid-template-columns: 1fr; }
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: 52px;
+    left: 0;
+    right: 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--bd);
+    padding: 8px 24px 16px;
+    flex-direction: column;
+  }
+
+  .nav.open { display: flex; }
+  .menu-btn { display: flex; }
+  .hdr-cta { display: none; }
+
+  .lab { padding: 20px; }
+  .webvm-frame { height: 400px; }
+}
+
+@media (max-width: 480px) {
+  .g3, .g4 { grid-template-columns: 1fr; }
+}
+/* END responsive */
+
+/* pages — page-specific layouts */
+.intro {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: center;
+  padding: 72px 0 64px;
+}
+
+.intro h1 {
+  font-size: 2.8rem;
+  letter-spacing: -0.02em;
+}
+
+.txt-col {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 48px;
+  align-items: start;
+}
+/* END pages */
+
+
+/* tokens — design tokens */
+:root {
+  --bg: #fff;
+  --fg: #1a1a1a;
+  --mut: #666;
+  --acc: #2563eb;
+  --bd: #ddd;
+  --surf: #f5f5f5;
+}
+/* END tokens */

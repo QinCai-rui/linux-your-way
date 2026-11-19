@@ -1,0 +1,13 @@
+# Generated site output — rebuilt by CI and by `bun tools/build.js` locally.
+/index.html
+/about.html
+/why-linux.html
+/how-it-works.html
+/distributions.html
+/get-started.html
+
+# Local credentials
+.env
+.env.*
+
+**/.DS_Store

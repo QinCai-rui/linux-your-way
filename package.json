@@ -1,0 +1,9 @@
+{
+  "name": "linux-your-way",
+  "private": true,
+  "version": "1.0.0",
+  "description": "multi-page site; this builds static html",
+  "scripts": {
+    "build": "node tools/build.js"
+  }
+}
