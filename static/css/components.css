@@ -151,6 +151,7 @@
 /* START distro filters */
 .flts {
   display: flex;
+  /* gap spaces filter buttons from each other*/
   gap: 6px;
   margin-bottom: 20px;
 }
@@ -188,6 +189,7 @@
 }
 
 .hd {
+  /* Vertical padding creates room inside the section; the border marks its edge. */
   padding: 56px 0 48px;
   border-bottom: 1px solid var(--bd);
 }

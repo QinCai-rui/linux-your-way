@@ -93,6 +93,7 @@
   align-items: center;
   /* allow links in the footer to move below the license if needed*/
   flex-wrap: wrap;
+  /* gap still applies when the items wrap onto separate lines*/
   gap: 16px;
 }
 

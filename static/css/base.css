@@ -1,5 +1,8 @@
 /* START default browser styles */
-/* Apply sizing and spacing consistently, including generated ::before/::after content. */
+/* margin: outside an element; 
+   padding: inside it; 
+   gap: spaces its children. 
+*/
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -12,6 +15,14 @@ body {
   line-height: 1.6;
   color: var(--fg);
   background: var(--bg);
+  /*keep Tux visible behind the content as background */
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.88)),
+    url("../images/tux.svg");
+  background-repeat: no-repeat;
+  background-position: center, right 120px;
+  background-size: auto, min(42vw, 520px);
+  background-attachment: scroll, fixed;
 }
 
 a { color: inherit; }
@@ -28,6 +39,7 @@ h1, h2, h3 {
 h1 { font-size: 2.4rem; }
 h2 { font-size: 1.3rem; }
 
+/* Give paragraphs space after them, rather than adding space inside the text box. */
 p { margin-bottom: 1em; }
 
 .sr {
@@ -45,7 +57,7 @@ p { margin-bottom: 1em; }
 @media (max-width: 768px) {
   h1 { font-size: 1.8rem; }
   .intro, .txt-col { grid-template-columns: 1fr; }
-  .intro { padding-top: 40px; }
+  .intro { padding: 40px 24px 64px; }
   .g3, .g4 { grid-template-columns: 1fr 1fr; }
   .g2 { grid-template-columns: 1fr; }
 
@@ -79,9 +91,10 @@ p { margin-bottom: 1em; }
 .intro {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
+  /* gap separates the two columns*/
   gap: 48px;
   align-items: center;
-  padding: 72px 0 64px;
+  padding: 72px 24px 64px;
 }
 
 .intro h1 {
