@@ -1,4 +1,5 @@
-/* START defaults */
+/* START default browser styles */
+/* Apply sizing and spacing consistently, including generated ::before/::after content. */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -30,15 +31,17 @@ h2 { font-size: 1.3rem; }
 p { margin-bottom: 1em; }
 
 .sr {
+  /* make sure labels are available to screenreaders (accessibility) */
   position: absolute;
   width: 1px;
   height: 1px;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
 }
-/* END defaults */
+/* END default browser styles */
 
-/* START responsive */
+/* START responsive layout */
+/* switch multi-column sections to layouts that fit smaller screens like mobile */
 @media (max-width: 768px) {
   h1 { font-size: 1.8rem; }
   .intro, .txt-col { grid-template-columns: 1fr; }
@@ -46,6 +49,7 @@ p { margin-bottom: 1em; }
   .g3, .g4 { grid-template-columns: 1fr 1fr; }
   .g2 { grid-template-columns: 1fr; }
 
+  /*mobile menu overlays the page below the header; nav.js TODO */
   .nav {
     display: none;
     position: absolute;
@@ -69,9 +73,9 @@ p { margin-bottom: 1em; }
 @media (max-width: 480px) {
   .g3, .g4 { grid-template-columns: 1fr; }
 }
-/* END responsive */
+/* END responsive layout */
 
-/* pages — page-specific layouts */
+/* START page-specific layouts */
 .intro {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
@@ -91,10 +95,10 @@ p { margin-bottom: 1em; }
   gap: 48px;
   align-items: start;
 }
-/* END pages */
+/* END page-specific layouts */
 
 
-/* tokens — design tokens */
+/* START design tokens */
 :root {
   --bg: #fff;
   --fg: #1a1a1a;
@@ -103,4 +107,4 @@ p { margin-bottom: 1em; }
   --bd: #ddd;
   --surf: #f5f5f5;
 }
-/* END tokens */
+/* END design tokens */

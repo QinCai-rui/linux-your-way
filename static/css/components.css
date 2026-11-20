@@ -1,4 +1,4 @@
-/* reusable stuff */
+/* START reusable text styles */
 
 .tag {
   font-size: 0.75rem;
@@ -23,7 +23,9 @@
   margin-top: 24px;
 }
 
-/* call to action */
+/* END reusable text styles */
+
+/* START links and cards */
 .cta {
   display: inline-block;
   padding: 8px 16px;
@@ -80,7 +82,9 @@
   padding: 28px;
 }
 
-/* webvm iframe and embed stuff */
+/* END links and cards */
+
+/* START terminal and WebVM embed */
 .term,
 .webvm {
   background: #1a1a1a;
@@ -108,9 +112,11 @@
 .term-body .mut { color: #666; }
 
 .cur {
+  /* the cursor blinks like in a real terminal */
   animation: blink 1s step-end infinite;
 }
 
+/* A keyframe controls the cursor's visible and hidden states. */
 @keyframes blink { 50% { opacity: 0; } }
 
 .term-note {
@@ -140,6 +146,9 @@
   color: var(--acc);
 }
 
+/* END terminal and WebVM embed */
+
+/* START distro filters */
 .flts {
   display: flex;
   gap: 6px;
@@ -157,6 +166,7 @@
 .flt:hover { color: var(--fg); }
 
 .flt.active {
+  /* see js/distros.js */
   background: var(--acc);
   color: #fff;
   border-color: var(--acc);
@@ -168,6 +178,9 @@
   margin-top: 12px;
 }
 
+/* END distro filters */
+
+/* START page content blocks */
 .checks li {
   padding: 6px 0;
   color: var(--mut);
@@ -211,3 +224,4 @@
   padding: 32px;
   margin-bottom: 64px;
 }
+/* END page content blocks */
